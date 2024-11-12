@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="./assets/icons/Logo.svg" type="image/x-icon" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto:regular,500"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Poppins:regular,500,600"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./css/normalize.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<title>Dickens Coaching Academy</title>
+	</head>
+	<body>
+		<div class="site-wrapper">
+			<header class="header">
+				<div class="header__container">
+					<div class="header__logo">
+						<a href="#"
+							><img
+								src="./assets/icons/Logo.svg"
+								alt="Dickens Coaching Academy Logo"
+						/></a>
+					</div>
+					<div class="header__menu">
+						<ul class="header-menu">
+							<li class="header-menu__item header-menu__item_active">
+								<a href="#">Home</a>
+							</li>
+							<li class="header-menu__item">
+								<select
+									name="Courses"
+									id="courses-select"
+									onchange="location=this.value"
+								>
+									<option value="" selected disabled>Courses</option>
+									<option value="#Course1">Course 1</option>
+									<option value="#Course2">Course 2</option>
+								</select>
+							</li>
+							<li class="header-menu__item"><a href="#about">About</a></li>
+							<li class="header-menu__item">
+								<a href="#contact-us">Contact us</a>
+							</li>
+						</ul>
+					</div>
+					<div class="header__button-wrap">
+						<button class="header__button">Login</button>
+					</div>
+				</div>
+			</header>
+			<main class="page"></main>
+			<footer class="footer">
+				<div class="footer__container"></div>
+			</footer>
+		</div>
+	</body>
+</html>
