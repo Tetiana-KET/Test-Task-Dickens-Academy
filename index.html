@@ -40,8 +40,8 @@
 									onchange="location=this.value"
 								>
 									<option value="" selected disabled>Courses</option>
-									<option value="#Course1">Course 1</option>
-									<option value="#Course2">Course 2</option>
+									<option value="#course1">Course 1</option>
+									<option value="#course2">Course 2</option>
 								</select>
 							</li>
 							<li class="header-menu__item"><a href="#about">About</a></li>
@@ -51,11 +51,93 @@
 						</ul>
 					</div>
 					<div class="header__button-wrap">
-						<button class="header__button">Login</button>
+						<button class="button header__button" type="button">Login</button>
 					</div>
 				</div>
 			</header>
-			<main class="page"></main>
+			<main class="page">
+				<section class="welcome">
+					<div class="welcome__container">
+						<div class="welcome__content">
+							<h1 class="welcome__title">
+								<span>Welcome to </span>Dickens Executive Coaching Academy
+							</h1>
+							<div class="welcome__text">
+								Your resource of choice for coaching education
+							</div>
+							<div class="welcome__button-wrap">
+								<a
+									href="https://link_to_courses_example.com"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="button welcome__button"
+									>Explore Courses</a
+								>
+							</div>
+						</div>
+						<div class="welcome__img-wrap">
+							<img
+								src="./assets/images/welcome.png"
+								alt="welcome section image"
+							/>
+						</div>
+					</div>
+				</section>
+				<section class="advantages">
+					<div class="advantages__container">
+						<h2 class="advantages__title">Advantages</h2>
+						<div class="advantages__content">
+							<div class="advantages__item advantage">
+								<div class="advantage icon-wrap">
+									<img
+										src="./assets/icons/Icon.svg"
+										alt="advantage icon"
+										class="advantage__img"
+									/>
+								</div>
+								<h3 class="advantage__title">Launch Your Coaching Career</h3>
+								<p class="advantage__description">
+									A comprehensive course track to ICF credentialing
+								</p>
+							</div>
+							<div class="advantages__item advantage">
+								<div class="advantage icon-wrap">
+									<img
+										src="./assets/icons/Icon-1.svg"
+										alt="advantage icon"
+										class="advantage__img"
+									/>
+								</div>
+								<h3 class="advantage__title">Coaching in the workplace</h3>
+								<p class="advantage__description">
+									Serve as a thought leader within your organization
+								</p>
+							</div>
+							<div class="advantages__item advantage">
+								<div class="advantage icon-wrap">
+									<img
+										src="./assets/icons/Icon-2.svg"
+										alt="advantage icon"
+										class="advantage__img"
+									/>
+								</div>
+								<h3 class="advantage__title">Continuing Coaching Education</h3>
+								<p class="advantage__description">
+									Beginner or a seasoned pro, you'll find a course right for you
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="about" id="about"></section>
+				<section class="courses">
+					<div class="courses__item" id="course1"></div>
+					<div class="courses__item" id="course2"></div>
+				</section>
+				<section class="schedule-call"></section>
+				<section class="testimonials"></section>
+				<section class="FAQ"></section>
+			</main>
 			<footer class="footer">
 				<div class="footer__container"></div>
 			</footer>
