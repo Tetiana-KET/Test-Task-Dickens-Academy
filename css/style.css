@@ -55,6 +55,7 @@ body.no-scroll {
 	color: var(--darkblue-100);
 	background: var(--white);
 	border: none;
+	transition: all 0.5s;
 }
 
 .site-wrapper {
@@ -78,6 +79,11 @@ body.no-scroll {
 	height: 48px;
 }
 
+.header__logo img,
+.footer__logo img {
+	transition: transform 0.6s ease-in-out;
+}
+
 .header__menu,
 .footer-menu {
 	flex: 1;
@@ -91,7 +97,22 @@ body.no-scroll {
 }
 
 .header-menu__item {
+	position: relative;
 	padding: 10px 8px;
+}
+
+.header-menu__item::after,
+.footer-menu__item::after {
+	opacity: 0;
+	content: '';
+	position: absolute;
+	display: block;
+	width: 1%;
+	height: 1px;
+	background-color: var(--darkblue-100);
+	bottom: 1px;
+	right: 50%;
+	transition: all ease-in-out 0.6s;
 }
 
 .header-menu__item:first-child {
@@ -115,6 +136,7 @@ body.no-scroll {
 
 .header-menu__item_active {
 	border-bottom: 1px solid var(--darkblue-100);
+	pointer-events: none;
 }
 
 .header__button {
@@ -261,6 +283,7 @@ body.no-scroll {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: all 0.5s;
 }
 
 .details__text {
@@ -586,6 +609,7 @@ body.no-scroll {
 	height: 32px;
 	background: var(--darkblue-100);
 	background-image: url('../assets/icons/arrow1.svg') no-repeat;
+	transition: all 0.5s;
 }
 
 .testimonials__button-left img {
@@ -654,7 +678,7 @@ body.no-scroll {
 	list-style: none;
 }
 
-.FAQ__questions-details_open .FAQ__questions-summary:after {
+.FAQ__questions-details_open .FAQ__questions-summary::after {
 	display: block;
 	content: '';
 	border: 1px solid var(--darkblue-100);
@@ -663,7 +687,7 @@ body.no-scroll {
 	margin: 26px 0 30px;
 }
 
-.FAQ__questions-details:after {
+.FAQ__questions-details::after {
 	content: '';
 	font-size: 30px;
 	width: 40px;
@@ -677,9 +701,10 @@ body.no-scroll {
 	color: var(--white);
 	background: var(--darkblue-100) url('../assets/icons/plus.svg') center
 		no-repeat;
+	transition: all 0.5s;
 }
 
-.FAQ__questions-details_open:after {
+.FAQ__questions-details_open::after {
 	top: 37px;
 	background: var(--darkblue-100) url('../assets/icons/minus.svg') center
 		no-repeat;
@@ -767,12 +792,14 @@ body.no-scroll {
 }
 
 .footer-menu__item {
+	position: relative;
 	font-family: var(--font-family);
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 100%;
 	text-align: center;
 	padding: 3px 8px 8px 8px;
+	transition: all 0.5s;
 }
 
 .footer-menu__item:first-of-type {
@@ -782,9 +809,30 @@ body.no-scroll {
 @media (hover: hover) {
 	.header-menu__item select:hover,
 	.header__button:hover,
+	.button:hover,
 	.details:hover,
 	.testimonials__button:hover,
-	.FAQ__questions-details:hover:after {
+	.FAQ__questions-details:hover::after {
 		cursor: pointer;
+	}
+
+	.button:hover,
+	.details__button:hover,
+	.FAQ__questions-details:hover::after,
+	.testimonials__button:hover {
+		box-shadow: rgba(0, 0, 0, 0.3) 5px 4px 8px -1px,
+			rgba(0, 0, 0, 0.3) -3px 4px 6px 1px, rgba(0, 0, 0, 0.3) 3px -2px 8px;
+	}
+
+	.header-menu__item:hover::after,
+	.footer-menu__item:hover::after {
+		width: 100%;
+		opacity: 1;
+		right: 0%;
+	}
+
+	.header__logo:hover img,
+	.footer__logo img:hover {
+		transform: rotate(360deg);
 	}
 }
