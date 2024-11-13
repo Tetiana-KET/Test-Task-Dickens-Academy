@@ -410,7 +410,7 @@ body.no-scroll {
 	display: inline-block;
 	width: 24px;
 	height: 24px;
-	background-image: url('../assets/icons/Check.svg');
+	background: url('../assets/icons/Check.svg');
 	margin-right: 11px;
 }
 
@@ -507,6 +507,109 @@ body.no-scroll {
 
 /* TESTIMONIALS */
 
+.testimonials__container {
+	padding: 65px 0 50px 15px;
+}
+
+.testimonials__title {
+	font-size: 42px;
+	margin-bottom: 20px;
+}
+
+.carousel__items {
+	display: flex;
+	gap: 24px;
+	padding: 20px 0;
+}
+
+.testimonial-card {
+	flex: 1;
+	padding: 20px 20px 10px;
+	display: flex;
+	gap: 20px;
+	border: 1px solid var(--darkblue-100);
+	border-radius: 12px;
+	margin-bottom: 30px;
+}
+
+.testimonial-card__content {
+	max-width: 340px;
+}
+
+.testimonial-card__name {
+	font-family: var(--second-family);
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 150%;
+	color: var(--black);
+}
+
+.testimonial-card__role {
+	font-size: 16px;
+	line-height: 150%;
+	color: var(--gray-500);
+	margin-bottom: 5px;
+}
+
+.testimonial-card__rate {
+	display: flex;
+	gap: 2px;
+	margin-bottom: 15px;
+}
+
+.testimonial-card__text {
+	font-size: 16px;
+	line-height: 150%;
+}
+
+.testimonials__pagination {
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid var(--darkblue-25);
+	border-radius: 100px;
+	padding: 12px 14px;
+	width: 221px;
+	height: 56px;
+}
+
+.testimonials__button {
+	border: none;
+	border-radius: 46px;
+	padding: 6px;
+	width: 32px;
+	height: 32px;
+	background: var(--darkblue-100);
+	background-image: url('../assets/icons/arrow1.svg') no-repeat;
+}
+
+.testimonials__button-left img {
+	transform: rotate(180deg);
+}
+
+.testimonials__button_disabled {
+	background: var(--blue-100);
+	pointer-events: none;
+}
+
+.pagination__items {
+	display: flex;
+	gap: 2px;
+}
+
+.pagination__item {
+	border-radius: 20px;
+	width: 13px;
+	height: 4px;
+	background: var(--blue-100);
+}
+
+.pagination__item_active {
+	width: 24px;
+	background: var(--darkblue-100);
+}
+
 /* FAQ */
 
 /* FOOTER */
@@ -514,7 +617,8 @@ body.no-scroll {
 @media (hover: hover) {
 	.header-menu__item select:hover,
 	.header__button:hover,
-	.details:hover {
+	.details:hover,
+	.testimonials__button:hover {
 		cursor: pointer;
 	}
 }
